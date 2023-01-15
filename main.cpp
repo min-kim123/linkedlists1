@@ -16,7 +16,6 @@ void add(int newvalue, Node*& pHead) {
         current->setNext(new Node());
         current->getNext()->setValue(newvalue);
     }
-
 }
 
 void print(Node* pHead) {
