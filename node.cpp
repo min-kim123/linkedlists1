@@ -1,23 +1,22 @@
 #include "node.h"
 
-Node::Node() {
+
+Node::Node(Student* newstudent) {//constructor
+    pNext = NULL;
+    student = newstudent;
+}
+
+Node::~Node() {//destructor
+    delete &student;
     pNext = NULL;
 }
 
-Node::~Node() {
-    delete &value;
-    pNext = NULL;
+Student* Node::getStudent() {//get (set already done with constructor.)
+    return student;
 }
 
-void Node::setValue(int newvalue) {
-    value = newvalue;
-}
-
-int Node::getValue() {
-    return value;
-}
-
-void Node::setNext(Node *newnext) {
+//get and set next
+void Node::setNext(Node* newnext) {
     pNext = newnext;
 }
 

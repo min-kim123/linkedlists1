@@ -5,14 +5,17 @@
 
 class Node {
     public:
-    Node();
+    //constructor and destructor
+    Node(Student* student);
     ~Node();
-    void setValue(int newvalue);
-    int getValue();
+    //get student
+    Student* getStudent();
+    //set and get next
     void setNext(Node* newnext);
     Node* getNext();
+    
     private:
-    int value;
+    Student* student;
     Node* pNext;
 };
 #endif
