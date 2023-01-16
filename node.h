@@ -13,7 +13,7 @@ class Node {
     //set and get next
     void setNext(Node* newnext);
     Node* getNext();
-    
+
     private:
     Student* student;
     Node* pNext;
